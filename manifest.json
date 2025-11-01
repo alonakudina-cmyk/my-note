@@ -1,0 +1,14 @@
+
+{
+  "name": "Мій конспект",
+  "short_name": "Конспект",
+  "start_url": "https://alonakudina-cmyk.github.io/my-tracker/",
+  "scope": "https://alonakudina-cmyk.github.io/my-tracker/",
+  "display": "standalone",
+  "background_color": "#f7f8fb",
+  "theme_color": "#2d6cdf",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "images/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "images/png" }
+  ]
+}

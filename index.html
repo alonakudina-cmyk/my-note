@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Мій конспект — PWA (тест)</title>
+
+  <!-- Підключаємо manifest, щоб браузер знав, що це PWA -->
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Стилі -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Іконки -->
+   <link rel="icon" href="images/icon-192.png" type="image/png">
+   <link rel="apple-touch-icon" href="icon-512.png">
+</head>
+<body>
+  <!-- Хедер з заголовком і кнопкою додати розділ -->
+  <header>
+    <h1>Мій конспект</h1>
+    <button id="addSectionBtn" title="Додати розділ">＋ Додати розділ</button>
+  </header>
+
+  <!-- Основна частина додатка -->
+  <main id="app">
+    <!-- Головна: список розділів -->
+    <section id="listView" class="view">
+      <ul id="sectionsList"></ul>
+    </section>
+
+    <!-- Сторінка конкретного розділу -->
+    <section id="sectionView" class="view hidden">
+      <button id="backBtn">← Назад</button>
+      <h2 id="sectionTitle"></h2>
+
+      <!-- Текст конспекту -->
+      <div id="sectionContent" class="content"></div>
+
+      <!-- Посилання, які ти можеш додавати -->
+      <h3>Посилання</h3>
+      <ul id="linksList"></ul>
+
+      <h3>Додати посилання</h3>
+      <input id="linkUrl" placeholder="URL" />
+      <input id="linkText" placeholder="Текст" />
+      <button id="addLinkBtn">Додати посилання</button>
+
+      <h3>Коментар / Доповнення</h3>
+      <textarea id="noteInput" placeholder="Напиши тут..."></textarea>
+      <button id="saveNoteBtn">Зберегти</button>
+
+      <h3>Історія доповнень</h3>
+      <ul id="notesList"></ul>
+
+      <button id="deleteSectionBtn" class="danger">Видалити розділ</button>
+    </section>
+  </main>
+
+  <!-- Шаблон для рядка списку (не обовʼязково, але зручно) -->
+  <template id="sectionItemTpl">
+    <li class="section-item">
+      <button class="openBtn"></button>
+      <div class="meta"><small class="date"></small></div>
+      <button class="deleteBtn" title="Видалити">×</button>
+    </li>
+  </template>
+
+  <!-- Логіка додатку -->
+  <script src="app.js"></script>
+</body>
+</html>
