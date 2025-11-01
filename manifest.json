@@ -1,9 +1,8 @@
 
 {
-  "name": "Мій конспект",
-  "short_name": "Конспект",
-  "start_url": "https://alonakudina-cmyk.github.io/my-tracker/",
-  "scope": "https://alonakudina-cmyk.github.io/my-tracker/",
+  "name": "My Note",
+  "short_name": "My Note",
+  "start_url": "/my-note/",
   "display": "standalone",
   "background_color": "#f7f8fb",
   "theme_color": "#2d6cdf",
